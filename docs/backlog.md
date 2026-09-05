@@ -9,7 +9,8 @@ failure.
 | Action | Provisional tier | Why (mature-play reasoning) | Status | First seen |
 |---|---|---|---|---|
 | Go to / cycle Town Centers | B | Camera navigation, not production. Genuinely useful for checking a TC or dropping a building near one, but it is not part of the production loop and must not inherit a premium key merely for being TC-adjacent. Double-tapping `D` already centers on the TCs, which may cover most of this need. | Deferred | S2 |
-| Cycle idle villager | S (est.) | The other half of villager economy: production is worthless if the villagers then stand still. Expected to be the next reserve spend, but not bound until it is felt in a real game. | Deferred | S2 |
+| ~~Cycle idle villager~~ | S | The other half of villager economy: production is worthless if the villagers then stand still. | **Bound `S`, S5** | S2 |
+| Select all idle villagers | B | Bulk reassignment after a fight or a resource running dry. Real, but occasional, and usually the wrong tool — idles normally want individual assignment. Earmarked for `Ctrl+S` under the variant-pairing rule; no premium slot. | Deferred | S5 |
 
 ## Open structural questions
 

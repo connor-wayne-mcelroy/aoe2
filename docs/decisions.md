@@ -4,6 +4,56 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 5 — Idle villager
+
+**Reported need:** Cycling idle villagers, identified in Session 4 as the obvious next step.
+
+**Tier decision:** S. Production and idle-cleanup are two halves of one thing — queuing
+villagers is worthless if they then stand around, and idle time compounds exactly the way
+missed production does. This was tiered S in Session 2 and nothing since argues it down.
+
+**Outcome:** Spend the `S` reserve.
+
+**Bindings changed:** `S` → Select next idle villager (**global**).
+
+**Reasoning:**
+
+- *Why `S` specifically.* It was designated in Session 2 as a **ring**-finger reserve,
+  precisely because the sweep already held index (`F`) and middle (`D`). That reasoning still
+  holds: all three sweep keys are now distinct fingers, and `F` -> `S` crosses cleanly on the
+  transition from production to idle cleanup.
+- *Why not a thumb button.* This is the interesting one, because the scope model's rule 4
+  says globals are natural thumb candidates — moving one off the keyboard reclaims that key
+  everywhere. It loses here to hand alternation. The idle loop is *key, click, key, click*:
+  on the keyboard that alternates hands, one job each. On `Mouse4` the entire loop collapses
+  onto the right hand — thumb, click, thumb, click — while the left hand does nothing. Rule 4
+  is about supply; this is about throughput, and throughput wins on the layout's second-most
+  frequent loop.
+- *Accepted cost.* Repeats land on the ring finger, which is weaker than the index finger
+  carrying the `F` repeats. Judged acceptable because cycling several idles at once should be
+  rare in good play — if it turns out not to be, that is a real signal to revisit.
+
+**New rule — variant pairing.** A bulk, inverse, or narrower variant of a bound action goes
+on `Ctrl+<same key>`. One physical location per concept, modifier carries the variation. This
+is spatial consistency, not a mnemonic, and it keeps variants off premium slots. First
+application: *select all idle villagers* is earmarked for `Ctrl+S`, tiered B, not bound.
+
+**Reserve replenished — and changed in kind.** Instead of designating a single tier-1 key,
+`W` `E` `R` is now held as a **contiguous block**. It is an unbroken run sitting directly
+above the sweep's `S` `D` `F`, and adjacency is the one form of real estate that cannot be
+reassembled after being nibbled away one binding at a time. Control groups — the S-tier
+tension flagged in Session 1 — are the leading candidate; `Q` and `T` extend it to five keys
+if needed. Generous on purpose. Tier 2 remains the working supply and is ample.
+
+**Watch item:** two of three bindings are now globals. Correct for an economy-first layout,
+since the eco loops must fire from any selection state, but the global layer is being spent
+quickly and the next candidate deserves more scrutiny than these two needed.
+
+**Open questions carried forward:** build menus, control-group relocation (now with a block
+reserved for it), whether `D` should move to a thumb button.
+
+---
+
 ## Session 4 — Scope model verified
 
 **Tested in game:**

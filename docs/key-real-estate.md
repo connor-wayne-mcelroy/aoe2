@@ -66,7 +66,11 @@ that is not also mid-chain. This is what makes `Mouse4`/`Mouse5` and `Space` spe
 different actions under different selections. This expands supply considerably — but only
 where the contexts genuinely cannot overlap, and never against a global.
 
-**Modifier hygiene.** Prefer `Ctrl` and `Alt` as hotkey modifiers. Leave `Shift` alone.
+**Variant pairing.** Where an action has a bulk, inverse, or narrower variant, that variant
+belongs on `Ctrl+<the same key>`. One physical location per concept, with the modifier
+carrying the variation. This is spatial consistency rather than a mnemonic — it reduces what
+the hands must learn without inventing letter associations, and it keeps variants off
+premium slots they do not deserve.
 
 ## Scope: the second price dimension
 
@@ -126,12 +130,18 @@ actions from being stuck with tier-3 slots.
 |---|---|
 | `Mouse4` | An S-tier action that must fire mid-drag or mid-aim |
 | `Mouse5` | An S-tier action that must fire mid-drag or mid-aim |
-| `S` | The next S-tier action, per the standing reserve rule |
+| `W` `E` `R` | Held **as a contiguous block**, not as three separate slots |
 
-`S` replaced `F`/`D` when those were spent on the villager production loop in Session 2.
-It is the strongest remaining tier-1 key, and it is a **ring**-finger key, which matters:
-the existing macro sweep already occupies index (`F`) and middle (`D`), so a ring-finger
-slot is the one that chains cleanly with it. `W` is the same finger and the natural
-fallback if `S` proves awkward.
+**Why a block.** `W` `E` `R` is an unbroken run of tier-1 keys sitting directly above the
+macro sweep's `S` `D` `F`. Some future needs want *adjacency* rather than a single good key —
+control groups are the obvious candidate, and they are the known S-tier tension flagged in
+Session 1. A contiguous run is the one kind of real estate that cannot be reassembled once
+it has been nibbled away one binding at a time, so it is held whole. `Q` and `T` extend it
+to a five-key run if that is what control groups eventually need.
+
+This is deliberately a generous reserve. It leaves tier 2 (`A` `Q` `G` `T` `C` `V` `X`
+`Caps`) as the working supply for A- and B-tier actions, which is ample, plus both thumb
+buttons. If something S-tier arrives that genuinely needs a single prime key and cannot use
+tier 2, the block is broken then — with a logged reason.
 
 `Space` is not reserved but is not cheap either; it currently carries a useful default.

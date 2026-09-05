@@ -9,6 +9,7 @@ and is fair game to replace.
 |---|---|---|---|---|---|
 | `F` | 1 | Contextual (TC) | Train villager | S | Session 2 |
 | `D` | 1 | **Global** | Select all Town Centers | S | Session 2 |
+| `S` | 1 | **Global** | Select next idle villager | S | Session 5 |
 
 Both scopes confirmed in game (Session 4).
 
@@ -21,12 +22,18 @@ so the pressure stays visible.
 | Slot | Action | Spent |
 |---|---|---|
 | `D` | Select all Town Centers | Session 2 |
+| `S` | Select next idle villager | Session 5 |
 
 **Anticipated demand.** Listed to keep the future layout in mind, not as commitments or a
-queue: cycle idle villager (est. S), select all military (est. A), go to / cycle TC (B),
-cycle idle military building (B), go to last event (B), select-all-of-building-type (B/C).
-Six or so plausible globals against a much smaller supply of keys worth spending on them.
-Expect this layer to be rationed, and expect some of these to end up on modifiers or unbound.
+queue: select all military (est. A), go to / cycle TC (B), cycle idle military building (B),
+go to last event (B), select all idle villagers (B), select-all-of-building-type (B/C).
+Against a much smaller supply of keys worth spending on them. Expect this layer to be
+rationed, and expect some of these to end up on modifiers or unbound.
+
+Two of the layout's three bindings are already globals. That is the correct shape for an
+economy-first layout — the eco loops must fire from any selection state — but it means the
+global layer is being consumed fast, and the next candidate needs a harder look than these
+two did.
 
 **Hazard.** Because `D` is global, firing the sweep while a building footprint is on the
 cursor cancels the placement. The sweep is safe mid-walk, mid-fight, mid-anything *except*
@@ -57,12 +64,21 @@ Held empty on purpose. See `docs/key-real-estate.md` for the reserve policy.
 The one chain that matters most so far. Keep it protected when placing anything new.
 
 ```
-D  ->  F  F  F ...        select all TCs, then queue a villager per press
+production      D  ->  F  F  F ...          select all TCs, queue a villager per press
+idle cleanup    S  -> click,  S  -> click   grab next idle villager, assign it, repeat
 ```
 
-`D` is middle finger, `F` is index: different fingers, and middle-to-index is a natural
-outward roll. The repeated key sits on the strongest finger. Neither key moves the camera,
-so the whole loop runs without disturbing whatever the mouse is doing.
+Fingers: `D` middle, `F` index, `S` ring. All three distinct, so no pair in the sweep
+collides, and `F` -> `S` (index to ring) crosses the hand cleanly on the transition between
+loops.
+
+`D` -> `F` is an outward middle-to-index roll with the repeated key on the strongest finger.
+Neither key moves the camera, so production runs without disturbing the mouse.
+
+The idle loop alternates hands by design: key with the left, assign with the right, key with
+the left. This is the main reason it stayed on the keyboard rather than a thumb button — on
+`Mouse4` the whole loop would collapse onto the right hand, thumb-then-click over and over,
+while the left hand sat idle.
 
 Because `D` is global, the sweep fires from any selection state — mid-build, mid-fight,
 anything. That is the point of it, and it is what the key is being paid for.
