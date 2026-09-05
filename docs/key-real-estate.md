@@ -75,11 +75,21 @@ Deliberately held empty so future high-priority actions have somewhere to land. 
 gets one of these by default — a slot leaves this list only by an explicit decision logged
 in `docs/decisions.md`.
 
+**Standing reserve rule.** At all times, hold **both thumb buttons and at least one tier-1
+key** unbound. Reserves are not a starting allowance to be drawn down; when one is spent,
+another tier-1 key is designated in its place. This is what keeps late-discovered S-tier
+actions from being stuck with tier-3 slots.
+
 | Slot | Held for |
 |---|---|
 | `Mouse4` | An S-tier action that must fire mid-drag or mid-aim |
 | `Mouse5` | An S-tier action that must fire mid-drag or mid-aim |
-| `F` | The single most frequent keyboard-triggered action |
-| `D` | The second most frequent, ideally one that chains with `F` |
+| `S` | The next S-tier action, per the standing reserve rule |
+
+`S` replaced `F`/`D` when those were spent on the villager production loop in Session 2.
+It is the strongest remaining tier-1 key, and it is a **ring**-finger key, which matters:
+the existing macro sweep already occupies index (`F`) and middle (`D`), so a ring-finger
+slot is the one that chains cleanly with it. `W` is the same finger and the natural
+fallback if `S` proves awkward.
 
 `Space` is not reserved but is not cheap either; it currently carries a useful default.

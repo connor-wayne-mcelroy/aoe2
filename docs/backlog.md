@@ -8,7 +8,8 @@ failure.
 
 | Action | Provisional tier | Why (mature-play reasoning) | Status | First seen |
 |---|---|---|---|---|
-| _(empty)_ | | | | |
+| Go to / cycle Town Centers | B | Camera navigation, not production. Genuinely useful for checking a TC or dropping a building near one, but it is not part of the production loop and must not inherit a premium key merely for being TC-adjacent. Double-tapping `D` already centers on the TCs, which may cover most of this need. | Deferred | S2 |
+| Cycle idle villager | S (est.) | The other half of villager economy: production is worthless if the villagers then stand still. Expected to be the next reserve spend, but not bound until it is felt in a real game. | Deferred | S2 |
 
 ## Open structural questions
 
@@ -23,3 +24,16 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
 - **Selection contexts.** How much key reuse DE genuinely allows across villager /
   military / building contexts. Needs in-game verification; the answer changes effective
   supply substantially.
+- **`F` as a general "train the primary unit" key.** If unit-creation hotkeys are scoped
+  per building, `F` could mean *train villager* at a TC and *train the main unit* at a
+  barracks / archery range / stable. That would be an unusually clean pattern — one finger,
+  one meaning, every producer. Attractive enough to be worth deliberately not spending `F`
+  elsewhere until it is tested.
+
+## To verify in game
+
+- Selecting all TCs and pressing train repeatedly should distribute villagers to the TCs
+  with the shortest queues. The whole value of `D -> F F F` depends on this; if DE instead
+  stacks them all on one TC, the loop needs rethinking.
+- Whether `D` leaves the camera in place on a single press (expected) and centers on
+  double-tap.
