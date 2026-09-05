@@ -5,10 +5,18 @@ and is fair game to replace.
 
 ## Bound
 
-| Slot | Grade | Action | Tier | Bound on |
-|---|---|---|---|---|
-| `F` | 1 | Train villager (TC context) | S | Session 2 |
-| `D` | 1 | Select all Town Centers | S | Session 2 |
+| Slot | Grade | Scope | Action | Tier | Bound on |
+|---|---|---|---|---|---|
+| `F` | 1 | Contextual (TC) | Train villager | S | Session 2 |
+| `D` | 1 | **Global** | Select all Town Centers | S | Session 2 |
+
+`D` is the layout's first and so far only **global** binding. It is therefore unavailable
+in every other context — a villager-selected `D` will select the Town Centers, not place a
+building. That is intended for the macro sweep but it is the expensive kind of binding; see
+the scope cost model in `docs/key-real-estate.md`.
+
+`F` is contextual and stays free for reuse elsewhere, including the possible
+"train the primary unit at any producer" pattern.
 
 ## Reserved
 
@@ -31,6 +39,9 @@ D  ->  F  F  F ...        select all TCs, then queue a villager per press
 `D` is middle finger, `F` is index: different fingers, and middle-to-index is a natural
 outward roll. The repeated key sits on the strongest finger. Neither key moves the camera,
 so the whole loop runs without disturbing whatever the mouse is doing.
+
+Because `D` is global, the sweep fires from any selection state — mid-build, mid-fight,
+anything. That is the point of it, and it is what the key is being paid for.
 
 ## Free premium supply
 

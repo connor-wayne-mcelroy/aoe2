@@ -62,12 +62,54 @@ in isolation.
 (attack-move, patrol, stance changes mid-fight) belongs on a thumb slot or a strong finger
 that is not also mid-chain. This is what makes `Mouse4`/`Mouse5` and `Space` special.
 
-**Context reuse.** DE scopes many hotkeys to a selection context (villager selected,
-military selected, building selected), so the same physical key can legitimately serve
-different actions in different contexts. This expands supply considerably — but only
-where the contexts genuinely cannot overlap. Verify in game before relying on it.
+**Context reuse.** Where scope is contextual, the same physical key can legitimately serve
+different actions under different selections. This expands supply considerably — but only
+where the contexts genuinely cannot overlap, and never against a global.
 
 **Modifier hygiene.** Prefer `Ctrl` and `Alt` as hotkey modifiers. Leave `Shift` alone.
+
+## Scope: the second price dimension
+
+A slot's grade says how good the key *feels*. Scope says how much of the layout it
+*consumes*. These are independent, and ignoring scope is how a layout quietly runs out of
+room.
+
+DE hotkeys fall into two kinds:
+
+**Global** (the Game Commands group — select-all-X, go-to-X, camera and control commands).
+Fires no matter what is selected. A global binding consumes that key in **every context,
+permanently**. There is no villager-context `D` if `D` is a global.
+
+**Contextual** (building command sets, unit commands, build menus). Only exists while the
+matching thing is selected. A contextual binding consumes that key **in one context only**,
+so the same physical key can serve different actions in contexts that cannot overlap.
+
+### The cost model
+
+> A global binding is roughly as expensive as *n* contextual bindings, where *n* is the
+> number of contexts you care about.
+
+Consequences that should drive every future decision:
+
+1. **Keep the global layer small.** Globals are the scarcest resource in the layout, not
+   the good keys. Only actions that must fire from anywhere, mid-anything, justify one.
+2. **A global action is what earns a premium key.** Being always-available is exactly the
+   property that pairs with a slot that is always under a finger.
+3. **Contextual actions should be routed around the global layer**, not the other way
+   round. Build menus and per-building train keys get whatever the globals left behind.
+4. **Globals are the natural candidates for the thumb buttons**, because moving a global
+   off the keyboard reclaims that key across every context at once. This is a much stronger
+   reason to spend a thumb slot than the mid-drag property alone.
+
+### Verify before trusting
+
+This model is from prior knowledge of DE's hotkey groups, not yet tested on your install.
+The 30-second check:
+
+- Bind the key, select a **villager**, press it. If the TCs get selected, it is global.
+- Then try assigning the same key inside Buildings 1. If the editor raises a duplicate or
+  conflict warning, the two genuinely collide; if it accepts silently, the contexts are
+  independent.
 
 ## Reserved slots
 

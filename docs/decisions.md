@@ -4,6 +4,57 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 3 — Scope collision on `D`
+
+**Reported need:** With a villager selected, does `D` place a building or rip the selection
+to the Town Centers?
+
+**Finding:** It rips you to the Town Centers, and the framework was under-specified for
+missing it.
+
+"Select all Town Centers" lives in DE's Game Commands group and is **global** — it fires
+regardless of selection. "Create Villager" is part of the Town Center's own command set and
+is **contextual**. So the two bindings made in Session 2 are not the same kind of object at
+all, and Session 2's claim that they cost one slot each was wrong for `D`.
+
+**Framework change:** Added **scope** as a second pricing dimension alongside slot grade.
+Grade says how good a key feels; scope says how much of the layout it consumes. A global
+binding costs that key in *every* context; a contextual one costs it in *one*. The scarcest
+resource in this layout is not good keys — it is the global layer.
+
+Four consequences now written into the price list: keep the global layer small; being global
+is what earns a premium key; route contextual actions around the globals rather than the
+reverse; and thumb buttons are especially valuable for globals, since moving a global off the
+keyboard reclaims that key across every context at once.
+
+**Outcome:** No bindings changed. `D` stays.
+
+**Reasoning:**
+
+- The collision is not a bug in the choice. The macro sweep is *supposed* to fire mid-build,
+  mid-fight, from any selection state — that is the whole reason it is worth a prime key. A
+  contextual select-all-TC would be useless.
+- What changed is the *price*, not the value. `D` is expensive, and it should be understood
+  as the layout's one global so far rather than as a cheap tier-1 spend.
+
+**Declined for now:** Moving select-all-TC to `Mouse4`. It is a genuinely attractive idea —
+it would reclaim `D` in every context while keeping the action just as available, and
+thumb-then-`F` splits across opposite hands, which has no finger contention at all. Held
+because the change is cheap and non-destructive at any later date, nothing is currently
+competing for `D`, and spending a thumb reserve before we know what actually needs mid-drag
+firing would break the standing reserve rule to buy something we can still buy later. This
+becomes live the moment the build-menu decision puts real pressure on `D`.
+
+**Caveat:** The scope model is prior knowledge, not yet tested on this install. A concrete
+verification procedure is in the price list and at the top of the backlog's verify list —
+including a check that "Create Villager" is genuinely TC-scoped. If it turns out to be
+global, `F` is badly mispriced and the "train the primary unit everywhere" idea is dead.
+
+**Open questions carried forward:** build menus, control-group relocation, whether `D` should
+move to a thumb button, whether `F` generalizes across producers.
+
+---
+
 ## Session 2 — Villager production loop
 
 **Reported need:** Constant villager production identified as the top priority, with a
