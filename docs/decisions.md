@@ -4,6 +4,74 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 6 — Military production selection
+
+**Reported need:** A way to select all barracks / archery ranges / stables.
+
+**Tier decision:** A for the main line, B for the rest.
+
+Selecting military production to queue units happens many times per game and is
+time-sensitive — an idle production building is army that does not exist. It falls short of
+S because military production is bursty (queue several, walk away) and does not exist at all
+in the early game, unlike villager production which runs from minute zero.
+
+The important refinement: **this is not one action, it is three, and they are not equally
+important.** Which building matters is decided by the game's main line, so binding all three
+at equal cost would leave two good keys idle in most games. Main line is Stables.
+
+**Outcome:** Bind at tier, with the variants under variant pairing.
+
+**Bindings changed:**
+
+| Slot | Action | Scope |
+|---|---|---|
+| `A` | Select all Stables | Global |
+| `Alt+A` | Select all Archery Ranges | Global |
+
+**Reasoning:**
+
+- *The producer policy did most of the work.* Because `F` already means "train the primary
+  unit at the selected producer," this action is only the front half of a chain that exists:
+  `A -> F F F` is structurally identical to `D -> F F F`. One verb, two loops. That is the
+  Session 4 policy reserve paying off exactly as intended.
+- *The sequence rule eliminated three otherwise-good keys.* `G`, `T` and `V` are all decent
+  tier-2 slots, and all three are **index**-finger keys. Since `F` is index and follows this
+  key on every single press of the loop, each would have collided on every use. Ruled out on
+  ergonomics alone, with no reference to what they might have "meant."
+- *Why `A`.* Home row, pinky, no reach, and pinky-to-index is the widest and fastest
+  alternation the left hand has. It also completes the home row as one action per finger:
+  `A` `S` `D` `F` = military, idle villagers, town centers, train.
+- *Why `Alt` and not `Ctrl` for the variant.* See the new rule below.
+
+**New rule — modifier choice follows the base key's finger.** `Ctrl` is a left-**pinky** key,
+so `Ctrl` plus a pinky base (`A` `Q` `Z` `Tab` `Caps`) asks one finger to do two jobs and
+forces a cramped pinky/ring contortion. `Alt` is a left-**thumb** key and conflicts with
+nothing on the left hand. Rule: pinky base keys take `Alt`; everything else defaults to
+`Ctrl`. A combo is only as good as the hand shape it produces, and "it is just a modifier"
+is not a reason to skip checking that.
+
+**Declined:** Barracks, tiered B and left unbound. High urgency (emergency spears) but low
+frequency, and this is the third binding in a session budgeted for one or two. Earmarked for
+`Ctrl+A` — deliberately the cramped combo, since it carries the rarest of the three. Promote
+to a bare tier-3 key if emergency spears become a recurring pain.
+
+**Also rejected:** an aggregate "select all military production buildings" spanning types,
+had one existed. It is actively incompatible with the producer policy — a mixed selection of
+stables and ranges makes `F` ambiguous. Per-type selection is not a limitation here, it is
+what makes the chain work.
+
+**Watch item — the build-menu squeeze is now real.** `D`, `S` and `A` are all globals, so all
+three are dead in the villager context, and they form a contiguous run across the home row.
+Three of the eight best left-hand keys are now unavailable to any future build menu. Session 3
+named exactly this as the trigger for moving a global to a thumb button; the trigger has not
+fired yet only because the build-menu decision itself is still open. Expect that to be the
+next structural move rather than another binding.
+
+**Open questions carried forward:** build menus (now urgent), control-group relocation,
+whether `D` should move to a thumb button (now likely).
+
+---
+
 ## Session 5 — Idle villager
 
 **Reported need:** Cycling idle villagers, identified in Session 4 as the obvious next step.

@@ -10,6 +10,7 @@ failure.
 |---|---|---|---|---|
 | Go to / cycle Town Centers | B | Camera navigation, not production. Genuinely useful for checking a TC or dropping a building near one, but it is not part of the production loop and must not inherit a premium key merely for being TC-adjacent. Double-tapping `D` already centers on the TCs, which may cover most of this need. | Deferred | S2 |
 | ~~Cycle idle villager~~ | S | The other half of villager economy: production is worthless if the villagers then stand still. | **Bound `S`, S5** | S2 |
+| Select all Barracks | B | Mostly a prerequisite building rather than a queue you return to, but emergency spears against cav are genuinely urgent when they happen. Urgency is high, frequency is low, which is exactly the B-tier shape. Earmarked for `Ctrl+A`; that combo is cramped (pinky doing two jobs), which is acceptable for the rarest of the three. Promote to a bare tier-3 key if emergency spears turn out to be a recurring pain. | Deferred | S6 |
 | Select all idle villagers | B | Bulk reassignment after a fight or a resource running dry. Real, but occasional, and usually the wrong tool — idles normally want individual assignment. Earmarked for `Ctrl+S` under the variant-pairing rule; no premium slot. | Deferred | S5 |
 
 ## Open structural questions
@@ -43,6 +44,10 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   stacks them all on one TC, the loop needs rethinking.
 - Whether `D` leaves the camera in place on a single press (expected) and centers on
   double-tap.
+- That DE exposes per-type "Select all Stables" / "Select all Archery Ranges" as separate
+  Game Commands globals, as assumed in Session 6.
+- That `F` really does train the primary unit at a stable and an archery range, not just at
+  the TC. Two loops now depend on the producer policy holding.
 
 ### Resolved
 

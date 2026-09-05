@@ -10,6 +10,8 @@ and is fair game to replace.
 | `F` | 1 | Contextual (TC) | Train villager | S | Session 2 |
 | `D` | 1 | **Global** | Select all Town Centers | S | Session 2 |
 | `S` | 1 | **Global** | Select next idle villager | S | Session 5 |
+| `A` | 2 | **Global** | Select all Stables | A | Session 6 |
+| `Alt+A` | 5 | **Global** | Select all Archery Ranges | A/B | Session 6 |
 
 Both scopes confirmed in game (Session 4).
 
@@ -23,10 +25,12 @@ so the pressure stays visible.
 |---|---|---|
 | `D` | Select all Town Centers | Session 2 |
 | `S` | Select next idle villager | Session 5 |
+| `A` | Select all Stables | Session 6 |
+| `Alt+A` | Select all Archery Ranges | Session 6 |
 
 **Anticipated demand.** Listed to keep the future layout in mind, not as commitments or a
-queue: select all military (est. A), go to / cycle TC (B), cycle idle military building (B),
-go to last event (B), select all idle villagers (B), select-all-of-building-type (B/C).
+queue: select all military units (est. A), go to / cycle TC (B), cycle idle military
+building (B), go to last event (B), select all idle villagers (B), select all Barracks (B).
 Against a much smaller supply of keys worth spending on them. Expect this layer to be
 rationed, and expect some of these to end up on modifiers or unbound.
 
@@ -34,6 +38,12 @@ Two of the layout's three bindings are already globals. That is the correct shap
 economy-first layout — the eco loops must fire from any selection state — but it means the
 global layer is being consumed fast, and the next candidate needs a harder look than these
 two did.
+
+**Build-menu pressure.** `D`, `S` and `A` are all globals, so all three are dead in the
+villager-selected context. Three of the eight best left-hand keys are now unavailable to any
+future build menu, and the run `A` `S` `D` is contiguous. This is the pressure that was named
+in Session 3 as the trigger for reconsidering whether a global should move to a thumb button.
+It has not been acted on yet, but it is close.
 
 **Hazard.** Because `D` is global, firing the sweep while a building footprint is on the
 cursor cancels the placement. The sweep is safe mid-walk, mid-fight, mid-anything *except*
@@ -47,7 +57,8 @@ Not bindings, and not slots held empty; commitments about how a key may be *spen
 
 | Slot | Policy |
 |---|---|
-| `F` | In any **producer** context (barracks, archery range, stable, dock, siege workshop), `F` is not to be spent on anything but "train the primary unit." Confirmed viable now that Create Villager is TC-scoped. One finger, one meaning, every producer. |
+| `F` | In any **producer** context (barracks, archery range, stable, dock, siege workshop), `F` is not to be spent on anything but "train the primary unit." Confirmed viable now that Create Villager is TC-scoped. One finger, one meaning, every producer. **Now load-bearing:** two loops depend on it. |
+| `Alt+A` / `Ctrl+A` | Reserved for the remaining military production types under variant pairing. `Alt+A` spent on Archery Ranges (S6); `Ctrl+A` held for Barracks. |
 
 ## Reserved
 
@@ -64,13 +75,22 @@ Held empty on purpose. See `docs/key-real-estate.md` for the reserve policy.
 The one chain that matters most so far. Keep it protected when placing anything new.
 
 ```
-production      D  ->  F  F  F ...          select all TCs, queue a villager per press
-idle cleanup    S  -> click,  S  -> click   grab next idle villager, assign it, repeat
+villagers       D      ->  F  F  F ...      select all TCs, queue a villager per press
+military        A      ->  F  F  F ...      select all Stables, queue a unit per press
+                Alt+A  ->  F  F  F ...      same, Archery Ranges
+idle cleanup    S      -> click,  S -> click   grab next idle villager, assign it, repeat
 ```
 
-Fingers: `D` middle, `F` index, `S` ring. All three distinct, so no pair in the sweep
-collides, and `F` -> `S` (index to ring) crosses the hand cleanly on the transition between
-loops.
+`F` is the universal terminator. Every producer loop is *select, then* `F`, and `F` always
+means the same thing: train the primary unit of whatever is selected. Two loops, one verb.
+
+Fingers: `A` pinky, `S` ring, `D` middle, `F` index. The home row is now one action per
+finger, left to right — military, idle villagers, town centers, train — with no pair in any
+loop sharing a finger.
+
+`A` -> `F` is the widest alternation available on the left hand (pinky to index), which is
+why `A` won over `G`, `T` and `V`: those are all index-finger keys and would have collided
+with `F` on every single press of the military loop.
 
 `D` -> `F` is an outward middle-to-index roll with the repeated key on the strongest finger.
 Neither key moves the camera, so production runs without disturbing the mouse.
