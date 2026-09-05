@@ -31,11 +31,9 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   any time, and spending a thumb reserve before knowing what needs mid-drag firing would
   break the standing reserve rule for a benefit we can still capture later. Revisit when the
   build-menu decision creates real pressure on `D`.
-- **`F` as a general "train the primary unit" key.** If unit-creation hotkeys are scoped
-  per building, `F` could mean *train villager* at a TC and *train the main unit* at a
-  barracks / archery range / stable. That would be an unusually clean pattern — one finger,
-  one meaning, every producer. Attractive enough to be worth deliberately not spending `F`
-  elsewhere until it is tested.
+- ~~**`F` as a general "train the primary unit" key.**~~ **Resolved (S4): viable.** Unit
+  creation is per-building scoped, so `F` can mean *train the main unit* at every producer.
+  Now a standing policy reserve in `layout.md` rather than an open question.
 
 ## To verify in game
 
@@ -44,9 +42,8 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   stacks them all on one TC, the loop needs rethinking.
 - Whether `D` leaves the camera in place on a single press (expected) and centers on
   double-tap.
-- **Scope test (do this first).** Select a villager, press `D`. If the Town Centers get
-  selected, "Select all Town Centers" is confirmed global and shadows `D` in every context.
-  Then try binding `D` inside Buildings 1 and see whether the editor warns about a conflict.
-- Whether "Create Villager" really is scoped to the Town Center rather than global. If it
-  turns out to be global too, `F` is far more expensive than currently priced and the
-  "train the primary unit everywhere" idea is dead.
+
+### Resolved
+
+- ~~Is select-all-TC global?~~ **Yes** (S4). Shadows `D` everywhere.
+- ~~Is Create Villager TC-scoped?~~ **Yes** (S4). `F` is reusable across contexts.

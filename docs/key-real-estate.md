@@ -101,15 +101,15 @@ Consequences that should drive every future decision:
    off the keyboard reclaims that key across every context at once. This is a much stronger
    reason to spend a thumb slot than the mid-drag property alone.
 
-### Verify before trusting
+### Verified
 
-This model is from prior knowledge of DE's hotkey groups, not yet tested on your install.
-The 30-second check:
+Both tested in game (Session 4) and confirmed:
 
-- Bind the key, select a **villager**, press it. If the TCs get selected, it is global.
-- Then try assigning the same key inside Buildings 1. If the editor raises a duplicate or
-  conflict warning, the two genuinely collide; if it accepts silently, the contexts are
-  independent.
+- **"Select all Town Centers" is global.** With a villager selected, `D` rips the selection
+  to the Town Centers. It shadows `D` in every context.
+- **"Create Villager" is Town-Center-scoped.** `F` is free for reuse in other contexts.
+
+The scope model is no longer a hypothesis. Price accordingly.
 
 ## Reserved slots
 

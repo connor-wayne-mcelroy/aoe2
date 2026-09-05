@@ -4,6 +4,50 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 4 — Scope model verified
+
+**Tested in game:**
+
+1. Villager selected, press `D` → selection ripped to the Town Centers. **Select-all-TC is
+   global, confirmed.**
+2. **Create Villager is Town-Center-scoped, confirmed.**
+
+**Bindings changed:** none. Both results confirm existing choices rather than disturb them.
+
+**What this settles:**
+
+- The scope cost model is promoted from prior knowledge to verified fact. Global vs
+  contextual is now the primary thing to establish about any candidate action, before slot
+  grade is even considered.
+- **The producer-key pattern is alive**, and this is the more valuable of the two results.
+  Because unit creation is per-building, `F` can mean "train the primary unit" at the TC,
+  barracks, archery range, stable, dock and siege workshop alike — one finger, one meaning,
+  every producer. That is worth protecting before anything else has a chance to claim it.
+
+**New commitment:** `F` is now a **policy reserve** in producer contexts — not a held-empty
+slot, but a rule that `F` may not be spent on anything other than "train the primary unit"
+wherever a producer is selected. This costs nothing today and prevents a genuinely good
+structural pattern from being eroded one context at a time.
+
+**Also added:** a global-layer register in `layout.md`, tracking spent globals and listing
+anticipated demand (idle villager, select-all-military, go-to-TC, idle military building,
+go-to-last-event, select-all-of-type). Roughly six plausible globals competing for a much
+smaller number of keys worth spending on them. Making that pressure visible now is what
+should stop a mid-tier global from casually taking a prime key later.
+
+**Hazard recorded:** the sweep cancels an in-progress building placement, since `D` is
+global and will drop the villager footprint. Safe mid-walk and mid-fight, not mid-placement.
+
+**Still not doing:** moving select-all-TC to `Mouse4`. Verification strengthened the
+*reasoning* behind that idea — globals really are the bottleneck — but not the *trigger*,
+which is real contention for `D`. Nothing is contending yet. Revisit at the build-menu
+decision.
+
+**Open questions carried forward:** build menus, control-group relocation, whether `D`
+should move to a thumb button.
+
+---
+
 ## Session 3 — Scope collision on `D`
 
 **Reported need:** With a villager selected, does `D` place a building or rip the selection
