@@ -104,6 +104,10 @@ Consequences that should drive every future decision:
 4. **Globals are the natural candidates for the thumb buttons**, because moving a global
    off the keyboard reclaims that key across every context at once. This is a much stronger
    reason to spend a thumb slot than the mid-drag property alone.
+5. **Contextual bindings on prime keys are cheap.** A prime key in one context costs nothing
+   anywhere else, so the usual instinct to save the best keys does not apply. Within a
+   context, give the best remaining key to the most frequent action without hesitation — the
+   only thing to check is that no global already shadows it.
 
 ### Verified
 

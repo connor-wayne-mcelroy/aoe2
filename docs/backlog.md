@@ -18,8 +18,12 @@ failure.
 These are unresolved decisions that will shape large parts of the layout. Answering one
 may reshuffle several bindings at once, so we hold them open rather than guessing.
 
-- **Build menus.** Positional grid vs. hand-picked per building. Deferred; currently on DE
-  defaults. Resolving this determines how much left-hand supply the villager context needs.
+- ~~**Build menus.**~~ **Resolved (S7): hand-picked, not grid.** `D`, `S` and `A` are globals
+  and globals beat context, so a grid would have three dead cells in its best row. Buildings
+  now get keys one at a time by placement frequency. Remaining candidates, unbound: House
+  (A — placed constantly, likely the next one), Lumber Camp and Mining Camp (B), Mill (B),
+  Town Center (B, but urgent when it matters), military buildings (B), Blacksmith/Market (C),
+  walls and gates (C/D).
 - **Control groups.** The default number row is tier 3-4 real estate carrying what is
   usually S-tier importance. Whether to relocate them, and what to, is a large decision
   that should not be made piecemeal.
@@ -47,7 +51,13 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
 - That DE exposes per-type "Select all Stables" / "Select all Archery Ranges" as separate
   Game Commands globals, as assumed in Session 6.
 - That `F` really does train the primary unit at a stable and an archery range, not just at
-  the TC. Two loops now depend on the producer policy holding.
+  the TC. Four loops now depend on the `F` policy holding.
+- **That the Mill farm-reseed queue exists and is bindable** in your build. This is the
+  weakest assumption in the layout so far. If it does not exist, farm upkeep falls back to
+  the villager-context `F` and re-placing by hand, which still works — only the upkeep half
+  is lost, not the spam.
+- That a villager-context building hotkey fires directly without opening a build page first,
+  including for buildings on the second page.
 
 ### Resolved
 

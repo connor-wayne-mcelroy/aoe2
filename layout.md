@@ -12,6 +12,8 @@ and is fair game to replace.
 | `S` | 1 | **Global** | Select next idle villager | S | Session 5 |
 | `A` | 2 | **Global** | Select all Stables | A | Session 6 |
 | `Alt+A` | 5 | **Global** | Select all Archery Ranges | A/B | Session 6 |
+| `F` | 1 | Contextual (villager) | Build Farm | A+ | Session 7 |
+| `F` | 1 | Contextual (Mill) | Add farm to reseed queue | A | Session 7 |
 
 Both scopes confirmed in game (Session 4).
 
@@ -39,11 +41,15 @@ economy-first layout — the eco loops must fire from any selection state — bu
 global layer is being consumed fast, and the next candidate needs a harder look than these
 two did.
 
-**Build-menu pressure.** `D`, `S` and `A` are all globals, so all three are dead in the
-villager-selected context. Three of the eight best left-hand keys are now unavailable to any
-future build menu, and the run `A` `S` `D` is contiguous. This is the pressure that was named
-in Session 3 as the trigger for reconsidering whether a global should move to a thumb button.
-It has not been acted on yet, but it is close.
+**Build menus: resolved (S7).** Hand-picked, not grid. `D`, `S` and `A` are globals and
+globals beat context (verified S4), so a positional grid would have three dead cells in its
+best row. The choice was effectively made by the last three sessions rather than decided on
+its merits — worth noting honestly — but hand-picked is also the better fit for this project,
+since it lets each building earn its key by placement frequency instead of by menu position.
+
+Buildings are bound one at a time, on demand, like everything else. Villager context is
+**cheap supply**: contextual bindings consume nothing globally, so a prime key there costs
+almost nothing.
 
 **Hazard.** Because `D` is global, firing the sweep while a building footprint is on the
 cursor cancels the placement. The sweep is safe mid-walk, mid-fight, mid-anything *except*
@@ -57,7 +63,7 @@ Not bindings, and not slots held empty; commitments about how a key may be *spen
 
 | Slot | Policy |
 |---|---|
-| `F` | In any **producer** context (barracks, archery range, stable, dock, siege workshop), `F` is not to be spent on anything but "train the primary unit." Confirmed viable now that Create Villager is TC-scoped. One finger, one meaning, every producer. **Now load-bearing:** two loops depend on it. |
+| `F` | **`F` = make the next obvious thing here.** Widened in S7 from "train the primary unit" to cover building and queueing. At a producer it trains the primary unit; with a villager selected it places a Farm; at a Mill it queues a farm reseed. One finger, one verb, every context. `F` is not to be spent on anything else in any context, ever. **Load-bearing:** four loops now depend on it. |
 | `Alt+A` / `Ctrl+A` | Reserved for the remaining military production types under variant pairing. `Alt+A` spent on Archery Ranges (S6); `Ctrl+A` held for Barracks. |
 
 ## Reserved
@@ -75,11 +81,23 @@ Held empty on purpose. See `docs/key-real-estate.md` for the reserve policy.
 The one chain that matters most so far. Keep it protected when placing anything new.
 
 ```
-villagers       D      ->  F  F  F ...      select all TCs, queue a villager per press
-military        A      ->  F  F  F ...      select all Stables, queue a unit per press
-                Alt+A  ->  F  F  F ...      same, Archery Ranges
-idle cleanup    S      -> click,  S -> click   grab next idle villager, assign it, repeat
+villagers       D      ->  F  F  F ...          select all TCs, queue a villager per press
+military        A      ->  F  F  F ...          select all Stables, queue a unit per press
+                Alt+A  ->  F  F  F ...          same, Archery Ranges
+idle cleanup    S      -> click,  S -> click    grab next idle villager, assign it, repeat
+farm spam       S      ->  F  -> shift-click x N   idle villager, farm cursor, ring them out
+farm upkeep     [mill] ->  F  F  F ...          queue reseeds so expiring farms self-replant
 ```
+
+### Farm spam, in detail
+
+The mechanic doing the work is **Shift-click**, not a hotkey: with the farm footprint on the
+cursor, Shift-click places a farm and *keeps the cursor loaded*. So the whole spam is one
+`F` press and then as many Shift-clicks as you have wood for. Ring the TC, then the mill.
+
+`S` -> `F` is ring finger to index — the same wide alternation that makes the military loop
+fast, and it means grabbing an idle villager and immediately putting it on farms is two keys
+with no finger collision.
 
 `F` is the universal terminator. Every producer loop is *select, then* `F`, and `F` always
 means the same thing: train the primary unit of whatever is selected. Two loops, one verb.

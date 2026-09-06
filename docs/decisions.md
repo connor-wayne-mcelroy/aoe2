@@ -4,6 +4,75 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 7 — Farms, and the build-menu decision
+
+**Reported need:** An efficient way to spam farms.
+
+**Tier decision:** A+ for placement, A for upkeep. Farms are the most-placed building in the
+game by a wide margin and the backbone of food from Feudal onward. Short of S only because
+placement is bursty — you ring out several at once and then leave it alone — rather than
+continuous the way villager production is.
+
+**The request split into two actions,** which is the main insight of this session:
+
+1. *Placing* farms — villager, build cursor, place.
+2. *Keeping them seeded* — expiring farms that need replanting.
+
+These are different problems with different homes, and solving only the first would have left
+the more annoying half untouched.
+
+**Outcome:** Bind both. Also resolves the build-menu question.
+
+**Bindings changed:**
+
+| Slot | Context | Action |
+|---|---|---|
+| `F` | Villager selected | Build Farm |
+| `F` | Mill selected | Add farm to reseed queue |
+
+**Build menus — resolved: hand-picked, not grid.**
+
+Deferred since Session 1, and it turns out the last three sessions decided it. A positional
+grid needs `QWER` / `ASDF` / `ZXCV`, but `D`, `S` and `A` are globals, and Session 4 verified
+that globals beat context. A grid would have three dead cells in its best row.
+
+Worth being honest that this was foreclosed by accumulated constraint rather than chosen on
+its merits. It is still the right answer for this project — hand-picked lets each building
+earn its key by how often it is actually placed, which is the whole premise here — but if
+grid had been the goal, those three globals should have been questioned earlier.
+
+**Reasoning for `F`:**
+
+- *Villager context is free supply.* Contextual bindings consume nothing globally, so putting
+  the best key on the most frequent villager action costs almost nothing. This is now written
+  into the price list as consequence 5: within a context, give the best remaining key to the
+  most frequent action without hesitation.
+- *The chain.* `S -> F -> shift-click x N`: grab an idle villager, load the farm cursor, ring
+  out as many as there is wood for. Ring finger to index, the same wide alternation that makes
+  the military loop fast.
+- *The actual spam mechanism is Shift-click, not a hotkey.* Shift-click places a farm and keeps
+  the cursor loaded. One `F` press covers an entire ring of farms. No amount of hotkey design
+  improves on that, and it would have been a mistake to bind around it.
+
+**The `F` policy widened.** From "train the primary unit at a producer" to **"make the next
+obvious thing here"**: trains a unit at a producer, places a Farm with a villager, queues a
+reseed at a Mill. One finger, one verb, four loops. This is the strongest structural pattern
+in the layout and `F` is now formally off-limits for anything else in any context.
+
+*Farm queueing was deliberately placed at the Mill rather than the Town Center*, even though
+`D` already selects all TCs. The TC context has `F` taken by Train Villager, so queueing there
+would have needed a second key and broken the one-verb rule. Using the Mill keeps `F`
+unambiguous everywhere.
+
+**Weakest assumption in the layout so far:** that the Mill farm-reseed queue exists and is
+bindable in your build. Flagged at the top of the verify list. If it is not there, the upkeep
+half falls back to villager-context `F` and manual replanting — the spam half is unaffected.
+
+**Open questions carried forward:** control-group relocation, whether `D` should move to a
+thumb button. House is the obvious next building candidate (A-tier, placed constantly).
+
+---
+
 ## Session 6 — Military production selection
 
 **Reported need:** A way to select all barracks / archery ranges / stables.
