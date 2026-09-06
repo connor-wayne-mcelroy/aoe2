@@ -4,6 +4,41 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 13 — Shift for add-to-group
+
+**Reported friction:** `Alt+R` is also hard to reach. Preference for `Shift`, accepting that it
+can be changed later if it causes problems.
+
+**Outcome:** Changed to `Shift+R` / `Shift+E`.
+
+**What the friction revealed — the S12 rule was wrong.** Hand splay was modelled assuming the
+hand stays anchored on home row. It does not: reaching the **top row lifts the whole hand**,
+which pulls the thumb off `Alt` just as it stretches the pinky toward `Ctrl`. No left-hand
+modifier is comfortable with a top-row base. `Shift` sits closest to home row, so it is the
+most reachable of the three — the preference here is ergonomically correct, not a compromise.
+
+**Rule amended,** with the more useful generalisation: **top-row keys make poor modifier
+bases.** An action that needs frequent modified variants should be based on the home row.
+`Shift` is no longer flatly avoided; it is permitted where reach rules out the others *and* a
+silent misfire is survivable.
+
+**The risk is accepted, not dismissed.** `Shift` is held all game for queueing and farm
+placement. If it is still down when `R` is pressed, the current selection is silently added to
+the army group — villagers included — and nothing looks wrong until they walk into a fight.
+Logged as a hazard in `layout.md`. The change is cheap to reverse, which is what makes taking
+the risk reasonable rather than reckless.
+
+**Consequence — replace-group is promoted.** With `Shift` carrying add, pollution is more
+likely, and replace is the only cure. Still unbound, but it moves from "someday" to "bind it
+the first time this bites," on `Ctrl+R` / `Ctrl+E`.
+
+**Watch item for the mature layout:** if the misfire proves common, the better fix is probably
+not another modifier but **moving the control-group bases off the top row** — which is what the
+amended rule now says out loud. That would be a larger move, since `E` and `R` were chosen for
+their finger quality, so it waits for evidence.
+
+---
+
 ## Session 12 — Modifier choice, and a documentation bug
 
 **Reported friction:** `Ctrl` is hard to reach with the pinky while pressing `E` and `R`.

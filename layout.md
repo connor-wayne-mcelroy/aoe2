@@ -17,8 +17,8 @@ and is fair game to replace.
 | `Caps` | 2 | Contextual (villager) | Building page 2 (military) | B | Session 9 |
 | `R` | 1 | **Global** | Select control group 1 | S | Session 11 |
 | `E` | 1 | **Global** | Select control group 2 | A | Session 11 |
-| `Alt+R` | 5 | **Global** | Add to control group 1 | A | Session 11 |
-| `Alt+E` | 5 | **Global** | Add to control group 2 | B | Session 11 |
+| `Shift+R` | 5 | **Global** | Add to control group 1 | A | Session 11 |
+| `Shift+E` | 5 | **Global** | Add to control group 2 | B | Session 11 |
 
 Both scopes confirmed in game (Session 4).
 
@@ -34,8 +34,8 @@ so the pressure stays visible.
 | `S` | Select next idle villager | Session 5 |
 | `A` | Select all Stables | Session 6 |
 | `Alt+A` | Select all Archery Ranges | Session 6 |
-| `R` / `Alt+R` | Control group 1: select / add | Session 11 |
-| `E` / `Alt+E` | Control group 2: select / add | Session 11 |
+| `R` / `Shift+R` | Control group 1: select / add | Session 11 |
+| `E` / `Shift+E` | Control group 2: select / add | Session 11 |
 
 **Anticipated demand.** Listed to keep the future layout in mind, not as commitments or a
 queue: select all military units (est. A), go to / cycle TC (B), cycle idle military
@@ -57,6 +57,12 @@ since it lets each building earn its key by placement frequency instead of by me
 Buildings are bound one at a time, on demand, like everything else. Villager context is
 **cheap supply**: contextual bindings consume nothing globally, so a prime key there costs
 almost nothing.
+
+**Hazard — stray `Shift`.** `Shift+R` / `Shift+E` add the current selection to a control
+group, and `Shift` is held all game for queueing and farm placement. If `Shift` is still down
+when you reach for `R`, you silently add whatever is selected — possibly villagers — to the
+army group, and nothing looks wrong until they walk into a fight. Accepted knowingly (S13) as
+the price of the only modifier that is comfortable with a top-row base. Watch for it.
 
 **Hazard.** Because `D` is global, firing the sweep while a building footprint is on the
 cursor cancels the placement. The sweep is safe mid-walk, mid-fight, mid-anything *except*
@@ -96,7 +102,7 @@ military        A      ->  F  F  F ...          select all Stables, queue a unit
 idle cleanup    S      -> click,  S -> click    grab next idle villager, assign it, repeat
 farm spam       S -> Q -> F -> shift-click x N   idle vill, economy page, farm, ring them out
 combat          R      -> [attack-move] -> click  grab the army, aim, go
-reinforce       box new units -> Alt+R         add them; creates the group if absent
+reinforce       box new units -> Shift+R       add them; creates the group if absent
 ```
 
 Farm *upkeep* needs no binding: villagers reseed automatically in DE as long as there is

@@ -34,7 +34,9 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   player's own account (never more than 3, usually 1-2) and stays unbound; `W` is its home if
   it earns one. "Set group" (replace contents) is deferred with it, earmarked for `Ctrl+R` /
   `Ctrl+E`. Its value rose in S12: with only *add* bound, a group that gets the wrong units in
-  it cannot be cleaned. Promote if that happens in a real game.
+  it cannot be cleaned. **Promoted in priority by S13:** with `Shift` now carrying add-to-group,
+  accidental pollution is more likely, and replace is the only cure. Bind it the first time a
+  group gets polluted — or sooner if the misfire turns out to be common.
 - **Should `D` move to a thumb button?** Since select-all-TC is global, putting it on
   `Mouse4` would reclaim `D` across every context at once while keeping the action equally
   available — and thumb-then-`F` uses opposite hands, so there is no finger contention at

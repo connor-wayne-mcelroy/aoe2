@@ -81,9 +81,17 @@ make to hold the modifier and press the base key at the same time.
   bottom-row bases on the left; bad with top-row bases (`Ctrl+E` is a two-row diagonal
   stretch). Never with a pinky base (`A` `Q` `Z` `Tab` `Caps`) — that asks one finger to do
   both jobs.
-- `Shift` is **avoided**, and not for reach. It is held for other reasons — shift-click to
-  queue, to add to a selection, to place buildings in a row. A `Shift+key` binding fires
-  whenever Shift happens to still be down, and those misfires are silent.
+- `Shift` is the **closest modifier to home row**, so it is the most reachable of the three —
+  but it is held for other reasons all game: shift-click to queue, to add to a selection, to
+  place buildings in a row. A `Shift+key` binding fires whenever `Shift` happens to still be
+  down, and those misfires are silent. Use it only where reach genuinely rules out the others,
+  and only where a silent misfire is survivable.
+
+**Top-row bases resist every modifier.** Reaching `Q W E R T` lifts the whole hand, which pulls
+the thumb off `Alt` as surely as it stretches the pinky toward `Ctrl`. No left-hand modifier is
+comfortable with a top-row base; `Shift` is merely the least bad. The real lesson is that
+**top-row keys make poor modifier bases** — an action that needs frequent modified variants is
+better based on the home row.
 
 Because `Ctrl` is the awkward one, it is the correct home for **rare** operations. Awkwardness
 is a price, and rare actions are what should pay it.
