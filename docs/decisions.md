@@ -4,6 +4,54 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 9 — Building placement is page-gated
+
+**Finding:** Building hotkeys do not fire directly. A villager must be on the correct
+building page first, so every placement is `[page] -> [building] -> click`. Currently the two
+pages sit on `Q` and `W`.
+
+This resolves a verify item open since Session 7, and it matters more than a missing keystroke
+usually would: the page prefix is pressed before **every** building, which makes it the
+highest-frequency action in the villager context. Nothing else in that context is pressed as
+often, because everything else goes through it.
+
+**Bindings changed:**
+
+| Slot | Context | Action |
+|---|---|---|
+| `Q` | Villager | Building page 1 (economy) — kept where it was |
+| `Caps` | Villager | Building page 2 (military) — **moved off `W`** |
+
+**Why page 2 moved off `W`.** `W` is part of the `W E R` block held for control groups.
+Control groups are global, globals beat context (verified S4), so a control group on `W` would
+silently kill the page-2 key. Moving now is nearly free — no motor memory has been built on
+this layout yet — and moving later would not be.
+
+Choosing the concrete over the speculative would normally argue the other way: a known,
+mandatory prefix should outrank a reserve for an action we have not even designed. It does not
+here only because the move costs almost nothing and improves the ergonomics independently.
+
+**New rule — the pinky column is for pages.** In the villager context, `Q`, `Caps`, `Tab` and
+`Z` carry building pages, and no building is ever bound to a pinky key. This guarantees the
+page prefix can never share a finger with the building key that follows it, whatever gets
+bound later. `Q` and `Caps` are both pinky and that is fine — they are alternatives, never
+pressed in sequence.
+
+The farm loop is now `S -> Q -> F -> shift-click x N`: ring, pinky, index. Three fingers, no
+collision.
+
+**Open question this raises:** whether the building page is **sticky**. If the panel remembers
+the last page, `Q` is pressed once per page *switch* rather than once per building, and its
+true frequency is far lower than assumed — which would drop it from A to B and make `Caps`
+generous for page 2. Flagged for verification. This does not change the bindings either way,
+only what they are worth, but it is the kind of thing that should be known before more
+buildings are hung off these keys.
+
+**Contingency:** if DE will not capture `Caps`, page 2 goes to `Tab` — same pinky column,
+slightly further from home.
+
+---
+
 ## Session 8 — Correction: farm reseeding needs no binding
 
 **Correction:** Villagers reseed farms automatically in DE while wood is available. The

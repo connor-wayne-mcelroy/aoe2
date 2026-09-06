@@ -13,6 +13,8 @@ and is fair game to replace.
 | `A` | 2 | **Global** | Select all Stables | A | Session 6 |
 | `Alt+A` | 5 | **Global** | Select all Archery Ranges | A/B | Session 6 |
 | `F` | 1 | Contextual (villager) | Build Farm | A+ | Session 7 |
+| `Q` | 2 | Contextual (villager) | Building page 1 (economy) | A | Session 9 |
+| `Caps` | 2 | Contextual (villager) | Building page 2 (military) | B | Session 9 |
 
 Both scopes confirmed in game (Session 4).
 
@@ -64,6 +66,7 @@ Not bindings, and not slots held empty; commitments about how a key may be *spen
 |---|---|
 | `F` | **`F` = make the next obvious thing here.** Widened in S7 from "train the primary unit" to cover building as well. At a producer it trains the primary unit; with a villager selected it places a Farm. One finger, one verb, every context. `F` is not to be spent on anything else in any context, ever. **Load-bearing:** four loops now depend on it. |
 | `Alt+A` / `Ctrl+A` | Reserved for the remaining military production types under variant pairing. `Alt+A` spent on Archery Ranges (S6); `Ctrl+A` held for Barracks. |
+| Pinky column | In the villager context, the pinky column (`Q`, `Caps`, `Tab`, `Z`) is for building **pages** only. No building gets a pinky key. |
 
 ## Reserved
 
@@ -84,11 +87,24 @@ villagers       D      ->  F  F  F ...          select all TCs, queue a villager
 military        A      ->  F  F  F ...          select all Stables, queue a unit per press
                 Alt+A  ->  F  F  F ...          same, Archery Ranges
 idle cleanup    S      -> click,  S -> click    grab next idle villager, assign it, repeat
-farm spam       S      ->  F  -> shift-click x N   idle villager, farm cursor, ring them out
+farm spam       S -> Q -> F -> shift-click x N   idle vill, economy page, farm, ring them out
 ```
 
 Farm *upkeep* needs no binding: villagers reseed automatically in DE as long as there is
 wood. Only initial placement is a hotkey problem.
+
+### Building placement is page-gated
+
+Confirmed in game (S9): a building hotkey does **not** fire directly. You must be on the
+correct building page first, so every placement is `[page] -> [building] -> click`.
+
+Fingers in the farm loop: `S` ring, `Q` pinky, `F` index — three different fingers, no
+collision anywhere in the chain.
+
+**Page keys live on the pinky column; building keys never use the pinky.** That single rule
+guarantees the page prefix can never collide with the building key that follows it, no matter
+which building is bound later. `Q` and `Caps` are both pinky, and they are never pressed
+together, so sharing a finger between them costs nothing.
 
 ### Farm spam, in detail
 
