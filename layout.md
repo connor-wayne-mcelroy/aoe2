@@ -15,6 +15,10 @@ and is fair game to replace.
 | `F` | 1 | Contextual (villager) | Build Farm | A+ | Session 7 |
 | `Q` | 2 | Contextual (villager) | Building page 1 (economy) | A+ | Session 9 |
 | `Caps` | 2 | Contextual (villager) | Building page 2 (military) | B | Session 9 |
+| `R` | 1 | **Global** | Select control group 1 | S | Session 11 |
+| `E` | 1 | **Global** | Select control group 2 | A | Session 11 |
+| `Ctrl+R` | 5 | **Global** | Add to control group 1 | A | Session 11 |
+| `Ctrl+E` | 5 | **Global** | Add to control group 2 | B | Session 11 |
 
 Both scopes confirmed in game (Session 4).
 
@@ -30,6 +34,8 @@ so the pressure stays visible.
 | `S` | Select next idle villager | Session 5 |
 | `A` | Select all Stables | Session 6 |
 | `Alt+A` | Select all Archery Ranges | Session 6 |
+| `R` / `Ctrl+R` | Control group 1: select / add | Session 11 |
+| `E` / `Ctrl+E` | Control group 2: select / add | Session 11 |
 
 **Anticipated demand.** Listed to keep the future layout in mind, not as commitments or a
 queue: select all military units (est. A), go to / cycle TC (B), cycle idle military

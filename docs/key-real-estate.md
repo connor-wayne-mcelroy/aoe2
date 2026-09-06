@@ -134,18 +134,17 @@ actions from being stuck with tier-3 slots.
 |---|---|
 | `Mouse4` | An S-tier action that must fire mid-drag or mid-aim |
 | `Mouse5` | An S-tier action that must fire mid-drag or mid-aim |
-| `W` `E` `R` | Held **as a contiguous block**, not as three separate slots |
+| `W` | The last free tier-1 key; control group 3 if it ever earns one |
 
-**Why a block.** `W` `E` `R` is an unbroken run of tier-1 keys sitting directly above the
-macro sweep's `S` `D` `F`. Some future needs want *adjacency* rather than a single good key —
-control groups are the obvious candidate, and they are the known S-tier tension flagged in
-Session 1. A contiguous run is the one kind of real estate that cannot be reassembled once
-it has been nibbled away one binding at a time, so it is held whole. `Q` and `T` extend it
-to a five-key run if that is what control groups eventually need.
+The `W` `E` `R` block was held from Session 5 for control groups, on the reasoning that a
+contiguous run is the one kind of real estate that cannot be reassembled once nibbled away.
+It paid off: Session 11 spent `E` and `R` on control groups and the block was there to spend.
+`W` is what the block did not need, and it stays held under the standing reserve rule.
 
-This is deliberately a generous reserve. It leaves tier 2 (`A` `Q` `G` `T` `C` `V` `X`
-`Caps`) as the working supply for A- and B-tier actions, which is ample, plus both thumb
-buttons. If something S-tier arrives that genuinely needs a single prime key and cannot use
-tier 2, the block is broken then — with a logged reason.
+Tier 2 (`Q` `G` `T` `C` `V` `X` `Caps`) remains the working supply for A- and B-tier actions.
+
+**`Mouse4` is effectively spoken for** by attack-move — the textbook mid-aim action and exactly
+what the thumb reserve was described for. Not bound yet, but do not spend it on anything else
+without revisiting that.
 
 `Space` is not reserved but is not cheap either; it currently carries a useful default.

@@ -30,6 +30,10 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
 - **Selection contexts.** How much key reuse DE genuinely allows across villager /
   military / building contexts. Needs in-game verification; the answer changes effective
   supply substantially.
+- **Control group 3, and removing/replacing group contents.** Group 3 is C-tier by the
+  player's own account (never more than 3, usually 1-2) and stays unbound; `W` is its home if
+  it earns one. "Set group" (replace contents) is deferred with it — `Alt+R` / `Alt+E` are the
+  natural slots under variant pairing.
 - **Should `D` move to a thumb button?** Since select-all-TC is global, putting it on
   `Mouse4` would reclaim `D` across every context at once while keeping the action equally
   available — and thumb-then-`F` uses opposite hands, so there is no finger contention at
@@ -37,6 +41,9 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   any time, and spending a thumb reserve before knowing what needs mid-drag firing would
   break the standing reserve rule for a benefit we can still capture later. Revisit when the
   build-menu decision creates real pressure on `D`.
+- ~~**Control-group relocation.**~~ **Resolved (S11):** groups 1 and 2 on `E` and `R`, off the
+  number row entirely. The Session 1 tension — S-tier importance sitting on tier 3-4 real
+  estate — is closed.
 - ~~**`F` as a general "train the primary unit" key.**~~ **Resolved (S4): viable.** Unit
   creation is per-building scoped, so `F` can mean *train the main unit* at every producer.
   Now a standing policy reserve in `layout.md` rather than an open question.
@@ -52,6 +59,9 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   Game Commands globals, as assumed in Session 6.
 - That `F` really does train the primary unit at a stable and an archery range, not just at
   the TC. Four loops now depend on the `F` policy holding.
+- **That "add to control group" creates the group when it does not exist.** The whole
+  two-operation design rests on this. If adding requires an existing group, "set group" comes
+  back as a needed binding and goes on `Alt+R` / `Alt+E`.
 - That DE captures `Caps` as a bindable key. If not, page 2 goes to `Tab` (also pinky column,
   slightly further from home).
 

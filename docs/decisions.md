@@ -4,6 +4,63 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 11 — Control groups
+
+**Reported need:** Control groups. Never more than 3, usually 1 and sometimes 2.
+
+**Tier decision:** Select group 1 is S. Select group 2 is A. Add is one tier below its
+matching select. Group 3 is C and stays unbound.
+
+**The design question was how many *operations*, not how many groups.** Initially this looked
+like three: select, set, add. The player's observation collapses it to two — **add creates the
+group when it does not exist**, so "set" is only needed to *replace* a group's contents, which
+is the same deferred bucket as removing units. Two operations per group, not three.
+
+**Bindings changed:**
+
+| Slot | Action |
+|---|---|
+| `R` | Select control group 1 |
+| `E` | Select control group 2 |
+| `Ctrl+R` | Add to control group 1 |
+| `Ctrl+E` | Add to control group 2 |
+
+Four bindings, over the usual one-to-two budget. Justified because they are one system: half
+of it is unusable alone, and splitting the pair across sessions would mean learning the same
+motor pattern twice.
+
+**Reasoning:**
+
+- *Frequency asymmetry drives the shape.* Select is pressed constantly in a fight; add is
+  pressed on reinforcement. Same concept, different frequency — so select takes the bare key
+  and add takes the modifier. Textbook variant pairing.
+- *Why `R` for group 1.* Index, the strongest finger, top row. `R -> E` is a fast index-to-
+  middle roll for the two-army case.
+- *`Ctrl` is correct here.* Neither base is a pinky key, so the Session 6 rule does not bite.
+- *Known weakness:* `R` shares the index finger with `F`, so "queue units then grab army"
+  (`F -> R`) is a same-finger move. Judged acceptable — the camera usually moves in between —
+  but it is the one soft spot in this choice and worth watching.
+
+**Why not the thumb buttons.** Combat is *select army -> attack-move -> click*. Putting
+group-select and attack-move both on thumb buttons lands two sequential presses on the same
+thumb, which is slower than it looks. Keeping select on the left hand gives left key -> right
+thumb -> right click, a clean three-way alternation. This also means **`Mouse4` is now
+effectively spoken for by attack-move** and should not be spent elsewhere without revisiting.
+
+**The `W` `E` `R` block paid off.** Held since Session 5 on the argument that contiguous real
+estate cannot be reassembled once nibbled away. Control groups arrived, the run was there, and
+two of the three were spent on it. `W` is what the block did not need and stays held as the
+tier-1 reserve — and as group 3's home if it ever earns one.
+
+**Closes the oldest open question.** Session 1 flagged that control groups carry S-tier
+importance on tier 3-4 real estate (the number row). They are now off the number row entirely.
+
+**Risk flagged:** the whole two-operation design assumes add-to-group creates the group. If it
+turns out to require an existing group, "set group" returns as a real binding on `Alt+R` /
+`Alt+E`. Cheap to fix, but worth testing early.
+
+---
+
 ## Session 10 — Page is not sticky
 
 **Finding:** The building panel resets to the base villager page after every placement. Two
