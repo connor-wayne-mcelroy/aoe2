@@ -32,8 +32,9 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   supply substantially.
 - **Control group 3, and removing/replacing group contents.** Group 3 is C-tier by the
   player's own account (never more than 3, usually 1-2) and stays unbound; `W` is its home if
-  it earns one. "Set group" (replace contents) is deferred with it — `Alt+R` / `Alt+E` are the
-  natural slots under variant pairing.
+  it earns one. "Set group" (replace contents) is deferred with it, earmarked for `Ctrl+R` /
+  `Ctrl+E`. Its value rose in S12: with only *add* bound, a group that gets the wrong units in
+  it cannot be cleaned. Promote if that happens in a real game.
 - **Should `D` move to a thumb button?** Since select-all-TC is global, putting it on
   `Mouse4` would reclaim `D` across every context at once while keeping the action equally
   available — and thumb-then-`F` uses opposite hands, so there is no finger contention at

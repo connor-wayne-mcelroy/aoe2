@@ -67,10 +67,26 @@ different actions under different selections. This expands supply considerably �
 where the contexts genuinely cannot overlap, and never against a global.
 
 **Variant pairing.** Where an action has a bulk, inverse, or narrower variant, that variant
-belongs on `Ctrl+<the same key>`. One physical location per concept, with the modifier
-carrying the variation. This is spatial consistency rather than a mnemonic — it reduces what
-the hands must learn without inventing letter associations, and it keeps variants off
-premium slots they do not deserve.
+belongs on a **modifier of the same key**. One physical location per concept, with the
+modifier carrying the variation. This is spatial consistency rather than a mnemonic — it
+reduces what the hands must learn without inventing letter associations, and it keeps variants
+off premium slots they do not deserve.
+
+**Modifier hygiene.** Which modifier is decided by **hand splay** — the shape the hand must
+make to hold the modifier and press the base key at the same time.
+
+- `Alt` is the left **thumb**. It reaches every left-hand base without moving a finger and is
+  not load-bearing for anything else in the game. **It is the default.**
+- `Ctrl` is the bottom-left **corner**, two rows below home. Acceptable with home- and
+  bottom-row bases on the left; bad with top-row bases (`Ctrl+E` is a two-row diagonal
+  stretch). Never with a pinky base (`A` `Q` `Z` `Tab` `Caps`) — that asks one finger to do
+  both jobs.
+- `Shift` is **avoided**, and not for reach. It is held for other reasons — shift-click to
+  queue, to add to a selection, to place buildings in a row. A `Shift+key` binding fires
+  whenever Shift happens to still be down, and those misfires are silent.
+
+Because `Ctrl` is the awkward one, it is the correct home for **rare** operations. Awkwardness
+is a price, and rare actions are what should pay it.
 
 ## Scope: the second price dimension
 

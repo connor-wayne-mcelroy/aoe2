@@ -17,8 +17,8 @@ and is fair game to replace.
 | `Caps` | 2 | Contextual (villager) | Building page 2 (military) | B | Session 9 |
 | `R` | 1 | **Global** | Select control group 1 | S | Session 11 |
 | `E` | 1 | **Global** | Select control group 2 | A | Session 11 |
-| `Ctrl+R` | 5 | **Global** | Add to control group 1 | A | Session 11 |
-| `Ctrl+E` | 5 | **Global** | Add to control group 2 | B | Session 11 |
+| `Alt+R` | 5 | **Global** | Add to control group 1 | A | Session 11 |
+| `Alt+E` | 5 | **Global** | Add to control group 2 | B | Session 11 |
 
 Both scopes confirmed in game (Session 4).
 
@@ -34,8 +34,8 @@ so the pressure stays visible.
 | `S` | Select next idle villager | Session 5 |
 | `A` | Select all Stables | Session 6 |
 | `Alt+A` | Select all Archery Ranges | Session 6 |
-| `R` / `Ctrl+R` | Control group 1: select / add | Session 11 |
-| `E` / `Ctrl+E` | Control group 2: select / add | Session 11 |
+| `R` / `Alt+R` | Control group 1: select / add | Session 11 |
+| `E` / `Alt+E` | Control group 2: select / add | Session 11 |
 
 **Anticipated demand.** Listed to keep the future layout in mind, not as commitments or a
 queue: select all military units (est. A), go to / cycle TC (B), cycle idle military
@@ -72,6 +72,7 @@ Not bindings, and not slots held empty; commitments about how a key may be *spen
 |---|---|
 | `F` | **`F` = make the next obvious thing here.** Widened in S7 from "train the primary unit" to cover building as well. At a producer it trains the primary unit; with a villager selected it places a Farm. One finger, one verb, every context. `F` is not to be spent on anything else in any context, ever. **Load-bearing:** four loops now depend on it. |
 | `Alt+A` / `Ctrl+A` | Reserved for the remaining military production types under variant pairing. `Alt+A` spent on Archery Ranges (S6); `Ctrl+A` held for Barracks. |
+| `Ctrl+R` / `Ctrl+E` | Held for **replace** control group 1 / 2. Deliberately the awkward combo: replacing is rare, and rare actions should pay the awkwardness. It is also the only way to clean a group that got the wrong units into it. |
 | Pinky column | In the villager context, the pinky column (`Q`, `Caps`, `Tab`, `Z`) is for building **pages** only. No building gets a pinky key. |
 
 ## Reserved
@@ -94,6 +95,8 @@ military        A      ->  F  F  F ...          select all Stables, queue a unit
                 Alt+A  ->  F  F  F ...          same, Archery Ranges
 idle cleanup    S      -> click,  S -> click    grab next idle villager, assign it, repeat
 farm spam       S -> Q -> F -> shift-click x N   idle vill, economy page, farm, ring them out
+combat          R      -> [attack-move] -> click  grab the army, aim, go
+reinforce       box new units -> Alt+R         add them; creates the group if absent
 ```
 
 Farm *upkeep* needs no binding: villagers reseed automatically in DE as long as there is

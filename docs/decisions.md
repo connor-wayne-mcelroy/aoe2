@@ -4,6 +4,57 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 12 — Modifier choice, and a documentation bug
+
+**Reported friction:** `Ctrl` is hard to reach with the pinky while pressing `E` and `R`.
+Proposal: use `Shift` instead.
+
+**Outcome:** Neither. Switched to **`Alt`**.
+
+| Slot | Action |
+|---|---|
+| `Alt+R` | Add to control group 1 (was `Ctrl+R`) |
+| `Alt+E` | Add to control group 2 (was `Ctrl+E`) |
+
+**Reasoning:**
+
+- The complaint is correct and the diagnosis is the useful part: `Ctrl` sits in the bottom-left
+  corner, `E` and `R` are top row, so the combo is a two-row diagonal splay across the hand.
+- `Shift` fixes the reach — it is a row closer — but reintroduces exactly what the original
+  "leave `Shift` alone" rule was protecting against. `Shift` is held for other reasons all game:
+  shift-click to queue, to add to a selection, to place farms in a row. A `Shift+key` binding
+  fires whenever `Shift` happens to still be down, and the misfire is **silent**: adding five
+  villagers to the army control group changes nothing visible until those villagers walk into a
+  fight. With only *add* bound and no *replace*, there would also be no way to clean the group.
+- `Alt` is the left thumb. It reaches every left-hand base with no finger movement and no
+  splay at all, and nothing else in the game competes for it. It fixes the reach problem more
+  completely than `Shift` does, without the hazard.
+
+**Rule rewritten — modifier choice follows hand splay.** `Alt` (thumb) is now the default
+modifier. `Ctrl` is acceptable for home- and bottom-row bases near the left, bad for top-row
+bases, never for pinky bases. `Shift` is avoided — not for reach, but because it is held for
+other reasons and its misfires are silent.
+
+The useful corollary: **`Ctrl` being awkward makes it the right home for rare operations.**
+Awkwardness is a price, and rare actions are what should pay it. `Ctrl+R` / `Ctrl+E` are now
+earmarked for *replace* group, and `Ctrl+A` remains earmarked for Barracks — both rare, both
+correctly priced.
+
+**Documentation bug found and fixed.** The Session 6 modifier rule was never actually written
+into `docs/key-real-estate.md`. A Session 5 edit had already replaced that paragraph with the
+variant-pairing rule, so the Session 6 edit matched nothing and was silently dropped; the rule
+survived only in this log. It has been restored, in its rewritten form.
+
+Worth noting because the price list is supposed to be the authority and the log merely the
+history. For two sessions it was the other way round. Edits to the rule files should be
+verified after the fact, not assumed.
+
+**Also raised:** replace-group is now more valuable than it looked in Session 11. With only
+*add* bound, a polluted group cannot be cleaned. Still deferred, but promote it the first time
+it actually happens.
+
+---
+
 ## Session 11 — Control groups
 
 **Reported need:** Control groups. Never more than 3, usually 1 and sometimes 2.
