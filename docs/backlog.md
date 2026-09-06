@@ -21,7 +21,7 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
 - ~~**Build menus.**~~ **Resolved (S7): hand-picked, not grid.** `D`, `S` and `A` are globals
   and globals beat context, so a grid would have three dead cells in its best row. Buildings
   now get keys one at a time by placement frequency. Remaining candidates, unbound: House
-  (A — placed constantly, likely the next one), Lumber Camp and Mining Camp (B), Mill (B),
+  (A — placed constantly, `G` held for it), Mining Camp (B, `C` held for it), Mill (B),
   Town Center (B, but urgent when it matters), military buildings (B), Blacksmith/Market (C),
   walls and gates (C/D).
 - **Control groups.** The default number row is tier 3-4 real estate carrying what is
@@ -41,7 +41,9 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   friction has been the modifier rather than the base key, which suggests the native fix is to
   stop using one for the frequent case. `G` is the candidate — home-row index, one key right of
   `F`, nothing held, and it removes the stray-`Shift` hazard from the operation most likely to
-  be done mid-fight. Group 2's add stays on `Shift+E`, since it is rare enough for a modifier.
+  be done mid-fight. **Conflict (S15):** `G` is now held for House in the villager context, and
+  a global would kill it. If this fallback is adopted, use `T` or `X` instead — the villager
+  context is now the scarcer of the two. Group 2's add stays on `Shift+E`, since it is rare enough for a modifier.
   Costs one more global, dead in the villager context. **Trigger:** adopt if `Shift+R` proves
   awkward or misfires in real games. Trying `Shift` first (S14).
 - **Should `D` move to a thumb button?** Since select-all-TC is global, putting it on

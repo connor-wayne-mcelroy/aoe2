@@ -4,6 +4,44 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 15 — Lumber Camp
+
+**Reported need:** Lumber camp around the 7th villager. The classic grid puts it on `R`, which
+is now a global (control group 1) and therefore dead in the villager context.
+
+**Tier decision:** B. Built several times a game — the opening camps plus relocations as wood
+lines deplete — and mildly time-sensitive, since a late camp costs walking time on every trip.
+Roughly four to six placements per game.
+
+**Bindings changed:** `V` (villager context) → Build Lumber Camp.
+
+**Reasoning:**
+
+- *Why not `G`.* `G` is the best remaining villager key — home row, index, one step right of
+  `F` — and it is being **held for House**, which is placed three to four times as often. This
+  is the first-come-first-served trap in its purest form: lumber camp is what came up in this
+  game, House is what will matter more across all games. The reserve discipline exists exactly
+  for this.
+- *Why `V`.* Bottom row, index finger, and the best key of the tier appropriate to a B-tier
+  action. It also sits next to `C`, which is now held for Mining Camp, keeping the two drop-off
+  camps adjacent — spatial grouping of same-role actions, which is motor learning, not mnemonic.
+- *Chain check.* `Q -> V` is pinky to index, no collision. Honest cost: `Q` is top-left and `V`
+  is bottom-centre, so the hand travels across two rows within the chain. Acceptable at B-tier;
+  it would not be acceptable for House.
+- *Frequency ordering used.* Farm (`F`, bound) > House (`G`, held) > Lumber Camp (`V`, bound)
+  ≈ Mining Camp (`C`, held) > Mill > everything else.
+
+**Conflict surfaced.** `G` was previously floated as the bare-key fallback for add-to-group-1.
+It cannot be both — a global would kill the contextual House binding. Since the villager context
+is now the scarcer of the two, the backlog entry was amended: if that fallback is adopted, it
+takes `T` or `X` instead.
+
+**Villager-context supply after this:** `T`, `X`, `B` and the number row remain, plus `G` and
+`C` held. `W` is deliberately left alone as the standing tier-1 reserve, since a global there
+would kill any contextual use.
+
+---
+
 ## Session 14 — Letter modifiers are not available
 
 **Question:** Could `A` serve as a modifier, giving `A+E` / `A+R`?
