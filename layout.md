@@ -13,7 +13,7 @@ and is fair game to replace.
 | `A` | 2 | **Global** | Select all Stables | A | Session 6 |
 | `Alt+A` | 5 | **Global** | Select all Archery Ranges | A/B | Session 6 |
 | `F` | 1 | Contextual (villager) | Build Farm | A+ | Session 7 |
-| `Q` | 2 | Contextual (villager) | Building page 1 (economy) | A | Session 9 |
+| `Q` | 2 | Contextual (villager) | Building page 1 (economy) | A+ | Session 9 |
 | `Caps` | 2 | Contextual (villager) | Building page 2 (military) | B | Session 9 |
 
 Both scopes confirmed in game (Session 4).
@@ -100,6 +100,11 @@ correct building page first, so every placement is `[page] -> [building] -> clic
 
 Fingers in the farm loop: `S` ring, `Q` pinky, `F` index — three different fingers, no
 collision anywhere in the chain.
+
+**The page does not persist** (confirmed S10): after a placement the panel resets to the base
+villager page, so `Q` is pressed before *every* building — two presses for one house, four for
+two houses unless you Shift-click. That makes `Q` the most-pressed key in the villager context
+and confirms it at A+.
 
 **Page keys live on the pinky column; building keys never use the pinky.** That single rule
 guarantees the page prefix can never collide with the building key that follows it, no matter

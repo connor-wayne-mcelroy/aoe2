@@ -52,15 +52,13 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   Game Commands globals, as assumed in Session 6.
 - That `F` really does train the primary unit at a stable and an archery range, not just at
   the TC. Four loops now depend on the `F` policy holding.
-- **Whether the building page is sticky.** If the panel stays on the last page used, then `Q`
-  is pressed once per *page switch* rather than once per building, and its real frequency is
-  much lower than assumed — which would drop it from A to B. Worth checking early, since it
-  changes how much the page keys deserve.
 - That DE captures `Caps` as a bindable key. If not, page 2 goes to `Tab` (also pinky column,
   slightly further from home).
 
 ### Resolved
 
+- ~~Is the building page sticky?~~ **No** (S10). The panel resets to the base villager page
+  after each placement, so the page key is pressed before every building. `Q` confirmed A+.
 - ~~Do building hotkeys fire directly with a villager selected?~~ **No** (S9). Placement is
   page-gated: `[page] -> [building] -> click`.
 - ~~Does the Mill farm-reseed queue need a hotkey?~~ **No** (S8). Villagers auto-reseed in DE

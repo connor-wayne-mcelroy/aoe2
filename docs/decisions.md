@@ -4,6 +4,26 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 10 — Page is not sticky
+
+**Finding:** The building panel resets to the base villager page after every placement. Two
+presses to build one house (`Q` then the house key), four for two houses unless Shift-clicked.
+
+**Bindings changed:** none. `Q` re-tiered A -> A+; it is now the most-pressed key in the
+villager context, since every building placement goes through it and nothing else in that
+context is pressed as often.
+
+This settles the Session 9 open question in the direction that makes the page keys *more*
+valuable, not less. The pinky-column rule and the `W` -> `Caps` move were both made on the
+assumption that the prefix mattered; that assumption is now confirmed rather than merely
+prudent.
+
+**Consequence worth remembering:** Shift-click is not only a convenience for farms — it is the
+only way to avoid paying the page tax on every repeated building. Any building placed in
+multiples (houses especially) should be Shift-clicked as a habit.
+
+---
+
 ## Session 9 — Building placement is page-gated
 
 **Finding:** Building hotkeys do not fire directly. A villager must be on the correct
