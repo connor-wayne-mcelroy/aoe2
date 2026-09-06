@@ -52,14 +52,12 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   Game Commands globals, as assumed in Session 6.
 - That `F` really does train the primary unit at a stable and an archery range, not just at
   the TC. Four loops now depend on the `F` policy holding.
-- **That the Mill farm-reseed queue exists and is bindable** in your build. This is the
-  weakest assumption in the layout so far. If it does not exist, farm upkeep falls back to
-  the villager-context `F` and re-placing by hand, which still works — only the upkeep half
-  is lost, not the spam.
 - That a villager-context building hotkey fires directly without opening a build page first,
   including for buildings on the second page.
 
 ### Resolved
 
+- ~~Does the Mill farm-reseed queue need a hotkey?~~ **No** (S8). Villagers auto-reseed in DE
+  while wood is available. Farm upkeep is not a hotkey problem at all.
 - ~~Is select-all-TC global?~~ **Yes** (S4). Shadows `D` everywhere.
 - ~~Is Create Villager TC-scoped?~~ **Yes** (S4). `F` is reusable across contexts.

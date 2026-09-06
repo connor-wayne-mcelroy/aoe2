@@ -13,7 +13,6 @@ and is fair game to replace.
 | `A` | 2 | **Global** | Select all Stables | A | Session 6 |
 | `Alt+A` | 5 | **Global** | Select all Archery Ranges | A/B | Session 6 |
 | `F` | 1 | Contextual (villager) | Build Farm | A+ | Session 7 |
-| `F` | 1 | Contextual (Mill) | Add farm to reseed queue | A | Session 7 |
 
 Both scopes confirmed in game (Session 4).
 
@@ -63,7 +62,7 @@ Not bindings, and not slots held empty; commitments about how a key may be *spen
 
 | Slot | Policy |
 |---|---|
-| `F` | **`F` = make the next obvious thing here.** Widened in S7 from "train the primary unit" to cover building and queueing. At a producer it trains the primary unit; with a villager selected it places a Farm; at a Mill it queues a farm reseed. One finger, one verb, every context. `F` is not to be spent on anything else in any context, ever. **Load-bearing:** four loops now depend on it. |
+| `F` | **`F` = make the next obvious thing here.** Widened in S7 from "train the primary unit" to cover building as well. At a producer it trains the primary unit; with a villager selected it places a Farm. One finger, one verb, every context. `F` is not to be spent on anything else in any context, ever. **Load-bearing:** four loops now depend on it. |
 | `Alt+A` / `Ctrl+A` | Reserved for the remaining military production types under variant pairing. `Alt+A` spent on Archery Ranges (S6); `Ctrl+A` held for Barracks. |
 
 ## Reserved
@@ -86,8 +85,10 @@ military        A      ->  F  F  F ...          select all Stables, queue a unit
                 Alt+A  ->  F  F  F ...          same, Archery Ranges
 idle cleanup    S      -> click,  S -> click    grab next idle villager, assign it, repeat
 farm spam       S      ->  F  -> shift-click x N   idle villager, farm cursor, ring them out
-farm upkeep     [mill] ->  F  F  F ...          queue reseeds so expiring farms self-replant
 ```
+
+Farm *upkeep* needs no binding: villagers reseed automatically in DE as long as there is
+wood. Only initial placement is a hotkey problem.
 
 ### Farm spam, in detail
 

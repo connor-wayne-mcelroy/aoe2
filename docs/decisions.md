@@ -4,6 +4,34 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 8 — Correction: farm reseeding needs no binding
+
+**Correction:** Villagers reseed farms automatically in DE while wood is available. The
+Session 7 Mill binding solved a problem the game does not have.
+
+**Bindings changed:** removed `F` (Mill context) → Add farm to reseed queue.
+
+`F` in the villager context is untouched. Farm *placement* was always the real request; the
+upkeep half was invented.
+
+**What this cost:** nothing in the layout — the Mill binding was contextual, so removing it
+frees a context nothing else wanted, and no other binding referenced it. The `F` policy is
+unchanged in substance: "make the next obvious thing here" still covers train-at-producer and
+build-farm-with-villager, four loops in total.
+
+**Where the error came from, since it is worth not repeating:** Session 7 correctly split the
+request into placement and upkeep, then assumed upkeep needed a *hotkey* answer rather than
+checking whether it needed an answer at all. The intake procedure already guards against this
+— Step 2 question 3 is "can this be done acceptably without a key?" — and it was applied to
+placement but not to upkeep. Splitting an action into halves means tiering **both** halves,
+not just carrying the parent tier across.
+
+**Process note added:** when a request splits into sub-actions, each sub-action goes through
+intake independently. A derived half inherits nothing from the parent — not its tier, and not
+the assumption that it is a hotkey problem.
+
+---
+
 ## Session 7 — Farms, and the build-menu decision
 
 **Reported need:** An efficient way to spam farms.

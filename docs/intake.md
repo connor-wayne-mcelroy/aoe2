@@ -25,6 +25,13 @@ Answer these before looking at any keyboard:
 Then assign S / A / B / C / D. Write the reasoning down — a tier without a reason is an
 impulse wearing a costume.
 
+### If the need splits into sub-actions
+
+Run each sub-action through Step 2 **independently**. A derived half inherits nothing from the
+parent request — not its tier, and not the assumption that it is a hotkey problem at all.
+Question 3 (substitutability) applies to every half separately: the game may already solve one
+of them. This is exactly the check that was skipped in Session 7.
+
 ## Step 3 — Decide whether it gets a binding *now*
 
 Tiering is not binding. Valid outcomes, in rough order of frequency:
