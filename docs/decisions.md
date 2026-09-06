@@ -4,6 +4,29 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 14 — Letter modifiers are not available
+
+**Question:** Could `A` serve as a modifier, giving `A+E` / `A+R`?
+
+**Answer:** No. DE accepts only `Ctrl`, `Alt` and `Shift`. A letter key would need keyboard
+firmware tap-hold or external scripting, both outside this layout — and `A` is already Select
+all Stables, so it would need tap-versus-hold behaviour the game has no concept of.
+
+Recorded in the price list as a hard constraint: **three modifiers is the entire supply,
+forever.** Worth stating plainly, because it caps how far variant pairing can be pushed. Every
+action wanting a modified variant competes for the same three.
+
+**Bindings changed:** none. `Shift+R` / `Shift+E` stand, to be tried in real games.
+
+**The pattern worth noting:** three sessions in a row the friction has been the *modifier*, not
+the base key. That is evidence the modifier is the wrong tool for an action done mid-fight, and
+the alternative — a bare key for add-to-group-1 — is now on the backlog with a concrete trigger
+rather than being adopted pre-emptively. Trying the cheap option first is the right order; the
+point is that the fallback is written down, so if `Shift` misfires the answer is already
+decided instead of relitigated.
+
+---
+
 ## Session 13 — Shift for add-to-group
 
 **Reported friction:** `Alt+R` is also hard to reach. Preference for `Shift`, accepting that it

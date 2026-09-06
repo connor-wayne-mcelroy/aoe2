@@ -37,6 +37,13 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
   it cannot be cleaned. **Promoted in priority by S13:** with `Shift` now carrying add-to-group,
   accidental pollution is more likely, and replace is the only cure. Bind it the first time a
   group gets polluted — or sooner if the misfire turns out to be common.
+- **Give add-to-group-1 a bare key instead of a modifier.** Three sessions running, the
+  friction has been the modifier rather than the base key, which suggests the native fix is to
+  stop using one for the frequent case. `G` is the candidate — home-row index, one key right of
+  `F`, nothing held, and it removes the stray-`Shift` hazard from the operation most likely to
+  be done mid-fight. Group 2's add stays on `Shift+E`, since it is rare enough for a modifier.
+  Costs one more global, dead in the villager context. **Trigger:** adopt if `Shift+R` proves
+  awkward or misfires in real games. Trying `Shift` first (S14).
 - **Should `D` move to a thumb button?** Since select-all-TC is global, putting it on
   `Mouse4` would reclaim `D` across every context at once while keeping the action equally
   available — and thumb-then-`F` uses opposite hands, so there is no finger contention at

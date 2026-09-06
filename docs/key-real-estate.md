@@ -72,6 +72,10 @@ modifier carrying the variation. This is spatial consistency rather than a mnemo
 reduces what the hands must learn without inventing letter associations, and it keeps variants
 off premium slots they do not deserve.
 
+**Modifier supply is fixed.** DE accepts only `Ctrl`, `Alt` and `Shift` as modifiers. A letter
+key cannot be one — that needs keyboard firmware (QMK/VIA tap-hold) or external scripting, both
+outside this layout. Three modifiers is the whole supply, forever.
+
 **Modifier hygiene.** Which modifier is decided by **hand splay** — the shape the hand must
 make to hold the modifier and press the base key at the same time.
 
