@@ -21,7 +21,8 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
 - ~~**Build menus.**~~ **Resolved (S7): hand-picked, not grid.** `D`, `S` and `A` are globals
   and globals beat context, so a grid would have three dead cells in its best row. Buildings
   now get keys one at a time by placement frequency. Remaining candidates, unbound: House
-  (A — placed constantly, `G` held for it), Mining Camp (B, `C` held for it), Mill (B),
+  (A — placed constantly, `G` held for it), Mining Camp (B, `C` held for it), Palisade Gate and
+  Stone Wall (C — natural neighbours of `T`, or `Ctrl+T` under variant pairing), Mill (B),
   Town Center (B, but urgent when it matters), military buildings (B), Blacksmith/Market (C),
   walls and gates (C/D).
 - **Control groups.** The default number row is tier 3-4 real estate carrying what is
@@ -74,6 +75,11 @@ may reshuffle several bindings at once, so we hold them open rather than guessin
 - **That "add to control group" creates the group when it does not exist.** The whole
   two-operation design rests on this. If adding requires an existing group, "set group" comes
   back as a needed binding and goes on `Alt+R` / `Alt+E`.
+- **Whether page 1 and page 2 are separate key spaces** — i.e. whether the same key can mean a
+  different building on each page. Since a building hotkey only fires on its own page this
+  should hold, and it roughly doubles building supply. Test: bind the same key to a building on
+  each page and check both fire correctly.
+- Which page Palisade Wall actually sits on. `T` was chosen to be correct either way.
 - That DE captures `Caps` as a bindable key. If not, page 2 goes to `Tab` (also pinky column,
   slightly further from home).
 

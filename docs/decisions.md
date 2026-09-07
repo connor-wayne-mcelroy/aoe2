@@ -4,6 +4,48 @@ Newest first. Records changes *and* declines. A session with no binding still ge
 
 ---
 
+## Session 16 — Palisade Wall
+
+**Reported need:** A key for palisade walls.
+
+**Tier decision:** B+. Higher than lumber camp on urgency, lower on nothing. Early walling is
+routine on open maps, and emergency walling against a raid is genuinely time-critical — a
+villager lost while fumbling for a key is a real cost. Held below A because it is
+phase-concentrated (early to mid game) and because the drag mechanic means one press covers an
+entire line of wall rather than one segment.
+
+**Bindings changed:** `T` (villager context) → Build Palisade Wall.
+
+**Reasoning:**
+
+- *Why `T` and not a bottom-row key.* `X` was the compact-motion candidate, but it is a ring
+  finger curling down, which is exactly the wrong shape for something pressed under pressure.
+  `T` is index — the fastest and most reliable finger — and the Session 13 worry about the top
+  row does not apply, since that was about holding a *modifier* while reaching up. There is no
+  modifier here.
+- *Why `T` specifically over any other free key.* It is unbound on **both** building pages, so
+  it is correct whether Palisade sits on page 1 or page 2. That uncertainty was not worth
+  resolving mid-game when a choice exists that is right either way.
+- *Chain.* `Q -> T` is pinky to index along the same row, very fast. `Caps -> T` is pinky to
+  index across one row, fine. Both work.
+
+**Supply discovery — pages are probably separate key spaces.** Since a building hotkey only
+fires while its page is active, page 1 and page 2 should behave as independent sub-contexts, so
+the same key can mean a different building on each. That roughly **doubles** building supply,
+which matters a great deal now that `D` `S` `A` `E` `R` are all globals and dead in the villager
+context. Recorded as a hypothesis with a test, not acted on — and `T` was deliberately chosen so
+that the answer does not affect this binding.
+
+**Not spent:** `F` and `G` on page 2. `F` is protected by the "make the next obvious thing here"
+policy, which has no clean meaning on a building menu, so it stays unspent rather than being
+stretched to fit. `G` stays clear until the page key-space question is settled, since spending
+it on page 2 before knowing whether pages are independent could quietly collide with House.
+
+**Backlogged:** Palisade Gate and Stone Wall at C-tier — natural neighbours of `T`, or `Ctrl+T`
+under variant pairing, which is the correct home for rare variants.
+
+---
+
 ## Session 15 — Lumber Camp
 
 **Reported need:** Lumber camp around the 7th villager. The classic grid puts it on `R`, which

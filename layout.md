@@ -16,6 +16,7 @@ and is fair game to replace.
 | `Q` | 2 | Contextual (villager) | Building page 1 (economy) | A+ | Session 9 |
 | `Caps` | 2 | Contextual (villager) | Building page 2 (military) | B | Session 9 |
 | `V` | 2 | Contextual (villager) | Build Lumber Camp | B | Session 15 |
+| `T` | 2 | Contextual (villager) | Build Palisade Wall | B+ | Session 16 |
 | `R` | 1 | **Global** | Select control group 1 | S | Session 11 |
 | `E` | 1 | **Global** | Select control group 2 | A | Session 11 |
 | `Shift+R` | 5 | **Global** | Add to control group 1 | A | Session 11 |
@@ -105,12 +106,23 @@ military        A      ->  F  F  F ...          select all Stables, queue a unit
 idle cleanup    S      -> click,  S -> click    grab next idle villager, assign it, repeat
 farm spam       S -> Q -> F -> shift-click x N   idle vill, economy page, farm, ring them out
 lumber camp     S -> Q -> V -> click             idle vill, economy page, camp, place
+palisade        [page] -> T -> click-drag        one press lays a whole line of wall
 combat          R      -> [attack-move] -> click  grab the army, aim, go
 reinforce       box new units -> Shift+R       add them; creates the group if absent
 ```
 
 Farm *upkeep* needs no binding: villagers reseed automatically in DE as long as there is
 wood. Only initial placement is a hotkey problem.
+
+### Pages are probably separate key spaces
+
+Because a building hotkey only fires while its page is active, page 1 and page 2 behave as two
+independent sub-contexts — the same physical key should be able to mean a different building on
+each. That roughly **doubles** building supply, which matters now that five keys (`D` `S` `A`
+`E` `R`) are globals and dead in the villager context.
+
+Not yet verified, so `T` was chosen for Palisade precisely because it is free on *both* pages
+and therefore correct either way. Confirm before relying on the doubled supply.
 
 ### Building placement is page-gated
 
